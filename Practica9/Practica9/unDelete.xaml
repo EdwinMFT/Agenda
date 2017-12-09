@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Practica9.unDelete">
+    <ContentPage.Content>
+        <Grid BackgroundColor="DarkBlue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <Label Text="Matricula: " Grid.Column="0" Grid.Row="0" VerticalOptions="Center" TextColor="White"/>
+            <Entry x:Name="Entry_Mat" Text="{Binding Matricula}" Grid.Column="1" Grid.Row="0" TextColor="White" BackgroundColor="DarkBlue" Keyboard="Numeric" Placeholder="Numeros" PlaceholderColor="White"/>
+            <Label Text="Nombre: " Grid.Column="0" Grid.Row="1" VerticalOptions="Center" TextColor="White"/>
+            <Entry x:Name="Entry_Name" Text="{Binding Nombre}" Grid.Column="1" Grid.Row="1" TextColor="White" BackgroundColor="DarkBlue"/>
+            <Label Text="Apellidos: " Grid.Column="0" Grid.Row="2" VerticalOptions="Center" TextColor="White"/>
+            <Entry x:Name="Entry_Ap" Text="{Binding Apellidos}" Grid.Column="1" Grid.Row="2" TextColor="White" BackgroundColor="DarkBlue"/>
+            <Label Text="Direccion: " Grid.Column="0" Grid.Row="3" VerticalOptions="Center" TextColor="White"/>
+            <Entry x:Name="Entry_Dir" Text="{Binding Direccion}" Grid.Column="1" Grid.Row="3" TextColor="White" BackgroundColor="DarkBlue"/>
+            <Label Text="Telefono: " Grid.Column="0" Grid.Row="4" VerticalOptions="Center" TextColor="White"/>
+            <Entry x:Name="Entry_Tel" Text="{Binding Telefono}" Grid.Column="1" Grid.Row="4" TextColor="White" BackgroundColor="DarkBlue" Keyboard="Numeric" Placeholder="10 Numeros" PlaceholderColor="White"/>
+            <Label Text="Carrera: " Grid.Column="0" Grid.Row="5" VerticalOptions="Center" TextColor="White"/>
+
+            <Picker Grid.Column="1" Grid.Row="5" SelectedIndexChanged="Picker_SelectedIndexChanged" SelectedItem="{Binding Carrera}" TextColor="White" x:Name="Lista">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>ISC</x:String>
+                        <x:String>I.Mecatronica</x:String>
+                        <x:String>I.Industrial</x:String>
+                        <x:String>I.Civil</x:String>
+                        <x:String>L.Biologia</x:String>
+                        <x:String>L.Administracion</x:String>
+                        <x:String>L.Gastronomia</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Semestre: " Grid.Column="0" Grid.Row="6" VerticalOptions="Center" TextColor="White"/>
+
+            <Picker Title="" Grid.Column="1" Grid.Row="6" SelectedIndexChanged="PickerSem_SelectedIndexChanged" SelectedItem="{Binding Semestre}" TextColor="White">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                        <x:String>6</x:String>
+                        <x:String>7</x:String>
+                        <x:String>8</x:String>
+                        <x:String>9</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Label Text="Correo: " Grid.Column="0" Grid.Row="7" VerticalOptions="Center" TextColor="White"/>
+            <Entry x:Name="Entry_Cor" Text="{Binding Correo}" Grid.Column="1" Grid.Row="7" TextColor="White" BackgroundColor="DarkBlue" Placeholder="edwin@gmail.com" PlaceholderColor="White"/>
+            <Label Text="GitHub: " Grid.Column="0" Grid.Row="8" VerticalOptions="Center" TextColor="White"/>
+            <Entry x:Name="Entry_Git" Text="{Binding Github}" Grid.Column="1" Grid.Row="8" TextColor="White" BackgroundColor="DarkBlue" PlaceholderColor="White"/>
+            <Entry x:Name="Entry_ID" Placeholder="ID" IsEnabled="False" Text="{Binding Id}" Grid.Column="1" Grid.Row="9"/>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

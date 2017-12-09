@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Practica9.RegistrosIUD">
+    <ContentPage.Content>
+        <Grid BackgroundColor="DarkBlue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <Label Text="Matricula: " Grid.Column="0" Grid.Row="0" VerticalOptions="Center" TextColor="White"/>
+            <Entry x:Name="Entry_ID" Grid.Column="1" Grid.Row="0" Keyboard="Numeric" TextColor="White" BackgroundColor="DarkBlue" Placeholder="Numeros" PlaceholderColor="White"/>
+            <Label Text="Nombre:" Grid.Column="0" Grid.Row="1" VerticalOptions="Center" TextColor="White"/>
+            <Entry x:Name="Entry_Name" Grid.Column="1" Grid.Row="1" TextColor="White" BackgroundColor="DarkBlue"/>
+            <Label Text="Apellidos: " Grid.Column="0" Grid.Row="2" VerticalOptions="Center" TextColor="White"/>
+            <Entry x:Name="Entry_Ap" Grid.Column="1" Grid.Row="2" TextColor="White" BackgroundColor="DarkBlue"/>
+            <Label Text="Direccion: " Grid.Column="0" Grid.Row="3" VerticalOptions="Center" TextColor="White"/>
+            <Entry x:Name="Entry_Dir" Grid.Column="1" Grid.Row="3" TextColor="White" BackgroundColor="DarkBlue"/>
+            <Label Text="Telefono: " Grid.Column="0" Grid.Row="4" VerticalOptions="Center" TextColor="White"/>
+            <Entry x:Name="Entry_Tel" Grid.Column="1" Grid.Row="4" Keyboard="Numeric" TextColor="White" BackgroundColor="DarkBlue" Placeholder="10 Numeros" PlaceholderColor="White"/>
+            <Label Text="Carrera: " Grid.Column="0" Grid.Row="5" VerticalOptions="Center" TextColor="White"/>
+            <!--<Entry x:Name="Entry_Car" Grid.Column="1" Grid.Row="5"/>-->
+            <Picker Title="" Grid.Column="1" Grid.Row="5" SelectedIndexChanged="Picker_SelectedIndexChanged" TextColor="White">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>ISC</x:String>
+                        <x:String>I.Mecatronica</x:String>
+                        <x:String>I.Industrial</x:String>
+                        <x:String>I.Civil</x:String>
+                        <x:String>L.Biologia</x:String>
+                        <x:String>L.Administracion</x:String>
+                        <x:String>L.Gastronomia</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Semestre: " Grid.Column="0" Grid.Row="6" VerticalOptions="Center" TextColor="White"/>
+            <Picker Title="" Grid.Column="1" Grid.Row="6" SelectedIndexChanged="PickerSem_SelectedIndexChanged" TextColor="White">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                        <x:String>6</x:String>
+                        <x:String>7</x:String>
+                        <x:String>8</x:String>
+                        <x:String>9</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <!--<Entry x:Name="Entry_Sem" Grid.Column="1" Grid.Row="6"/>-->
+            <Label Text="Correo: " Grid.Column="0" Grid.Row="7" VerticalOptions="Center" TextColor="White"/>
+            <Entry x:Name="Entry_Cor" Grid.Column="1" Grid.Row="7" TextColor="White" BackgroundColor="DarkBlue" Placeholder="edwin@gmail.com" PlaceholderColor="White"/>
+            <Label Text="GitHub: " Grid.Column="0" Grid.Row="8" VerticalOptions="Center" TextColor="White"/>
+            <Entry x:Name="Entry_Git" Grid.Column="1" Grid.Row="8" TextColor="White" BackgroundColor="DarkBlue"/>
+            <Entry Placeholder="ID" IsEnabled="False" Grid.Column="1" Grid.Row="9" x:Name="Entry_IDAzure"/>
+            <Picker Title="" Grid.Column="1" Grid.Row="10" SelectedIndexChanged="PickerUser_SelectedIndexChanged_1" TextColor="White">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Administrador</x:String>
+                        <x:String>Usuario</x:String>
+
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Button Text="Insertar" Grid.ColumnSpan="1" Clicked="Insertar_Clicked" Grid.Column="0" Grid.Row="11" TextColor="White" BackgroundColor="DarkBlue"/>
+            <Button Text="Cancelar" Grid.ColumnSpan="1" Clicked="Cancelar_Clicked" Grid.Column="1" Grid.Row="11" TextColor="White" BackgroundColor="DarkBlue"/>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

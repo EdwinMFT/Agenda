@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Practica9.MenuGeneral">
+  <!--Pages can be added as references or inline-->
+    <ContentPage Title="Add Usuarios" x:Name="MenuUser">
+        <ScrollView>
+        <StackLayout>
+            <Label Text="Menu Administrador"></Label>
+            
+            
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Label Text="Matricula: " Grid.Column="0" Grid.Row="0" VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="Entry_ID" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Keyboard="Numeric" TextColor="Black" Placeholder="Numeros" PlaceholderColor="Black"/>
+                <Label Text="Nombre:" Grid.Column="0" Grid.Row="1" VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="Entry_Name" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" TextColor="Black"/>
+                <Label Text="Apellidos: " Grid.Column="0" Grid.Row="2" VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="Entry_Ap" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" TextColor="Black"/>
+                <Label Text="Direccion: " Grid.Column="0" Grid.Row="3" VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="Entry_Dir" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" TextColor="Black"/>
+                <Label Text="Telefono: " Grid.Column="0" Grid.Row="4" VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="Entry_Tel" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Keyboard="Numeric" TextColor="Black" Placeholder="10 Numeros" PlaceholderColor="Black"/>
+                <Label Text="Carrera: " Grid.Column="0" Grid.Row="5" VerticalOptions="Center" TextColor="Black"/>
+                <!--<Entry x:Name="Entry_Car" Grid.Column="1" Grid.Row="5"/>-->
+                <Picker Title="" Grid.Column="1" Grid.Row="5" SelectedIndexChanged="Picker_SelectedIndexChanged" TextColor="Black">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>ISC</x:String>
+                            <x:String>I.Mecatronica</x:String>
+                            <x:String>I.Industrial</x:String>
+                            <x:String>I.Civil</x:String>
+                            <x:String>L.Biologia</x:String>
+                            <x:String>L.Administracion</x:String>
+                            <x:String>L.Gastronomia</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Label Text="Semestre: " Grid.Column="0" Grid.Row="6" VerticalOptions="Center" TextColor="Black"/>
+                <Picker Title="Semestre" Grid.Column="1" Grid.Row="6" SelectedIndexChanged="PickerSem_SelectedIndexChanged" TextColor="Black">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>1</x:String>
+                            <x:String>2</x:String>
+                            <x:String>3</x:String>
+                            <x:String>4</x:String>
+                            <x:String>5</x:String>
+                            <x:String>6</x:String>
+                            <x:String>7</x:String>
+                            <x:String>8</x:String>
+                            <x:String>9</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <!--<Entry x:Name="Entry_Sem" Grid.Column="1" Grid.Row="6"/>-->
+                <Label Text="Correo: " Grid.Column="0" Grid.Row="7" VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="Entry_Cor" Grid.Column="1" Grid.Row="7" TextColor="Black" Placeholder="edwin@gmail.com" PlaceholderColor="Black"/>
+                <Label Text="GitHub: " Grid.Column="0" Grid.Row="8" VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="Entry_Git" Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="2" TextColor="Black"/>
+                <Label Text="Github: " Grid.Column="0" Grid.Row="9" VerticalOptions="Center" TextColor="Black"/>
+                <Entry Placeholder="Password" IsEnabled="True" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="2" x:Name="Entry_Pass"/>
+                <Label Text="Tipo Usuario: " Grid.Column="0" Grid.Row="10" VerticalOptions="Center" TextColor="Black"/>
+                <Picker Title="" Grid.Column="1" Grid.Row="10" SelectedIndexChanged="PickerUser_SelectedIndexChanged_1" TextColor="Black">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                            <x:String>Administrador</x:String>
+                            <x:String>Usuario</x:String>
+
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Button Text="Guardar" Grid.ColumnSpan="1" Clicked="Insertar_Clicked" Grid.Column="0" Grid.Row="11" TextColor="White"/>
+                <Button Text="Salir" Grid.ColumnSpan="1" Clicked="Cancelar_Clicked" Grid.Column="2" Grid.Row="11" TextColor="Black"/>
+                <Button Text="Usuarios" Clicked="ButtonVerUs_Clicked" Grid.ColumnSpan="1" Grid.Column="1" Grid.Row="11" TextColor="Black"></Button>
+                </Grid>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage>
+    
+    
+    <ContentPage Title="Agregar Tareas">
+        <ScrollView>
+            <StackLayout>
+                <Button Text="Asignar Tareas" Clicked="AddTarea_Clicked"></Button>
+                <Entry x:Name="IDUSER" Placeholder="ID" TextColor="Black"></Entry>
+                <Entry x:Name="Tit" Placeholder="Titulo" TextColor="Black"></Entry>
+                <Entry x:Name="Des" Placeholder="Descripcion" TextColor="Black"></Entry>
+                <Entry x:Name="Usu" Placeholder="Usuario" TextColor="Black"></Entry>
+                <!--<Picker Title="" x:Name="UsuariosAdd" Grid.Column="1" Grid.Row="10" SelectedIndexChanged="PickerUserAdd_SelectedIndexChanged_1" TextColor="Black">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String></x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>-->
+                <Entry x:Name="Prio" Placeholder="Prioridad" TextColor="Black"></Entry>
+                <DatePicker x:Name="Calen"></DatePicker>
+                
+            <!--<Picker Text="{Binding }" Title="" Grid.Column="1" Grid.Row="10" SelectedIndexChanged="PickerDependencia_SelectedIndexChanged_1" TextColor="White">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>No</x:String>
+                        <x:String>Si</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>-->
+
+
+
+                <Picker Title="" Grid.Column="1" Grid.Row="10" SelectedIndexChanged="PickerTareas_SelectedIndexChanged_1" TextColor="Black">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>No</x:String>
+                            <x:String>Si</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Entry x:Name="userDep" Placeholder="Usuario Dependendiente" IsEnabled="False"></Entry>
+                <Entry x:Name="tarearDep" Placeholder="Tarea Dependendiente" IsEnabled="False"></Entry>
+                <Entry x:Name="Desarro" Placeholder="Desarrollo" TextColor="Black"></Entry>
+                <Entry x:Name="Tar" Placeholder="Tarea" TextColor="Black"></Entry>
+                <Picker Title="" Grid.Column="1" Grid.Row="10" SelectedIndexChanged="PickerStatus_SelectedIndexChanged_1" TextColor="Black">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Creada</x:String>
+                            <x:String>Ejecucion</x:String>
+                            <x:String>Completada</x:String>
+                            <x:String>No Completada</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage Title="Ver Tareas">
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Buscar Tareas"></Label>
+                <Entry x:Name="VerTar" Placeholder="Ingresar Matricula del Usuario" TextColor="Black"></Entry>
+                <Button Text="Buscar" Clicked="BuscarTareasUs_Clicked"></Button>
+
+                <ListView ItemsSource="{Binding Items}" CachingStrategy="RecycleElement" ItemSelected="ListViewTareas_ItemSelected" IsPullToRefreshEnabled="True" AbsoluteLayout.LayoutFlags="All" x:Name="Lista">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+
+                                    <Label Text="{Binding Titulo}" Grid.Column="0" Grid.Row="0"></Label>
+                                    <Label Text="{Binding Matricula}" Grid.Column="1" Grid.Row="0"></Label>
+                                    <Label Text="{Binding Status}" Grid.Column="2" Grid.Row="0"></Label>
+
+                                </Grid>
+
+                            </ViewCell>
+
+                        </DataTemplate>
+
+                    </ListView.ItemTemplate>
+
+                </ListView>
+                <!--<Button Text="Inicio" Clicked="InsertarRegistros_Clicked" TextColor="White"></Button>
+            <Button Text="Usuarios Eliminados" Clicked="RecuperarRegistros_Clicked" TextColor="White"></Button>
+            <Button Text="Usuarios Actuales" Clicked="VerUsuarios_Clicked" TextColor="White"></Button>-->
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+</TabbedPage>

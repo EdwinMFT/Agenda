@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Practica9.SelectPageTareas">
+    <ContentPage.Content>
+        <ScrollView BackgroundColor="Yellow">
+            <StackLayout>
+
+                <Entry x:Name="IDUSER" Text="{Binding Id}" Placeholder="ID" TextColor="Black" IsEnabled="False"></Entry>
+                <Entry x:Name="Tit" Text="{Binding Titulo}" Placeholder="Titulo" TextColor="Black" IsEnabled="False"></Entry>
+                <Entry x:Name="Des" Text="{Binding Descripcion}" Placeholder="Descripcion" TextColor="Black" IsEnabled="False"></Entry>
+                <Entry x:Name="Usu" Text="{Binding Matricula}" Placeholder="Matricula" TextColor="Black" IsEnabled="False"></Entry>
+                <Entry x:Name="Prio" Text="{Binding Prioridad}" Placeholder="Prioridad" TextColor="Black" IsEnabled="False"></Entry>
+                <DatePicker x:Name="Calen" Date="{Binding Fecha_entrega}" IsEnabled="False"></DatePicker>
+                <!--
+            <Picker Text="{Binding }" Title="" Grid.Column="1" Grid.Row="10" SelectedIndexChanged="PickerDependencia_SelectedIndexChanged_1" TextColor="White">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>No</x:String>
+                        <x:String>Si</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            -->
+
+
+                <Picker Title="Dependencia" SelectedItem="{Binding Dependencia}" Grid.Column="1" Grid.Row="10" SelectedIndexChanged="PickerDependencia_SelectedIndexChanged_1" TextColor="Black" IsEnabled="False" x:Name="PikerDep">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>No</x:String>
+                            <x:String>Si</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Entry x:Name="userDep" Text="{Binding UsuarioDepen}" Placeholder="Usuario Dependendiente" IsEnabled="False"></Entry>
+                <Entry x:Name="tarearDep" Text="{Binding TareaDepen}" Placeholder="Tarea Dependendiente" IsEnabled="False"></Entry>
+                <Entry x:Name="Desarro" Text="{Binding Desarrollo}" Placeholder="Desarrollo" TextColor="Black"></Entry>
+                <Entry x:Name="Tar" Text="{Binding Tarea}" Placeholder="Tarea" TextColor="Black"></Entry>
+                <Picker Title="" SelectedItem="{Binding Status}" Grid.Column="1" Grid.Row="10" SelectedIndexChanged="PickerStatus_SelectedIndexChanged_1" x:Name="PikerStatus" IsEnabled="False">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Creada</x:String>
+                            <x:String>Ejecucion</x:String>
+                            <x:String>Completada</x:String>
+                            <x:String>No Completada</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Button x:Name="btnEditar" Clicked="btnEditar_Clicked" Text="Editar"></Button>
+                <Button x:Name="btnUpdate" Clicked="btnUpdate_Clicked" Text="Finalizar"></Button>
+                <Button x:Name="btnCancelar" Clicked="btnCancelar_Clicked" Text="Cancelar"></Button>
+                
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

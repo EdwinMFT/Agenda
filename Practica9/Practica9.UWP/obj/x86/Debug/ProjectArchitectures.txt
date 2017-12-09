@@ -1,0 +1,2 @@
+C:\Users\Edwin\Documents\Final\Practica9\Practica9\Practica9.UWP\Practica9.UWP.csproj;x86
+C:\Users\Edwin\Documents\Final\Practica9\Practica9\Practica9\Practica9.csproj;neutral
